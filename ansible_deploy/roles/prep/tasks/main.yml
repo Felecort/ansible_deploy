@@ -8,8 +8,8 @@
 # - name: Удаляем все Docker-образы
 #   shell: docker rmi -f $(docker images -q) || echo "Образы уже удалены"
 
-# - name: Распаковываем архивы
-#   shell: gunzip -f /home/ubuntu/*.tar.gz
+- name: unpack
+  shell: gunzip -f /home/ubuntu/*.tar.gz
 
 - name: Load Docker-images
   shell: |
